@@ -89,9 +89,9 @@ transition={{ duration: 0.8 }}
       </div>
       <div>
         <h5 className="text-red-400 font-bold mb-2">Contacto</h5>
-        <p className="text-sm"> Av. Sabores del Este 123</p>
-        <p className="text-sm"> +54 11 5555-5555</p>
-        <p className="text-sm"> contacto@sabororiental.com</p>
+        <p className="text-sm"> Urquiza 583</p>
+        <p className="text-sm"> +54 2945-656339</p>
+        <p className="text-sm"> contacto@toros.com</p>
       </div>
       <div>
         <h5 className="text-red-400 font-bold mb-2">Síguenos</h5>
