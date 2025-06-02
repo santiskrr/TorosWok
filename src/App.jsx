@@ -1,35 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import Navbar from './componentes/navbar.jsx';
+import { Routes, Route } from 'react-router';
+import China from './pages/China';
+import Japon from './pages/Japon.jsx';
+import Corea from './pages/Corea.jsx';
+import Home from './pages/Home.jsx';
 import './App.css'
+import React from 'react';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <Navbar/>
+    <div className='bg-black'>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Japon" element={<Japon />} />
+        <Route path="/China" element={<China />} />
+        <Route path="/Corea" element={<Corea />} />
+      </Routes>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
 export default App
