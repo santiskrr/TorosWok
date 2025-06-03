@@ -1,6 +1,6 @@
 import Navbar from './componentes/navbar.jsx';
 import { Routes, Route } from 'react-router';
-import China from './pages/China';
+import China from './pages/China.jsx';
 import Japon from './pages/Japon.jsx';
 import Corea from './pages/Corea.jsx';
 import Home from './pages/Home.jsx';
