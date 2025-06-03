@@ -1,0 +1,28 @@
+body{
+    background-image: url("https://images5.alphacoders.com/136/1363894.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.imagen{
+    height: 10rem;
+    width: 15rem;
+    transition: 0.5s ease-in-out;
+}
+
+.plato .imagen:hover{
+    padding: 4%;
+    border-radius: 40px;
+    transition: 0.5s;
+}
+
+.plato:hover{
+    margin: 3%;
+    transition: 0.6s ;
+}
+
+.plato{
+    
+    transition: 0.5s ease-in-out;
+
+}
