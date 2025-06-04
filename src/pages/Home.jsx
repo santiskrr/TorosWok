@@ -14,8 +14,8 @@ initial={{ opacity: 0, y: -50 }}
 animate={{ opacity: 1, y: 0 }} 
 transition={{ duration: 0.8 }}
 >
-<h2 className="text-4x1 text-red-500 font-bold">Bienvenido a Toro's Wok</h2>
-<p className="mt-4">Explora los sabores intensos y exóticos de Asia</p>
+<h2 className="text-4x1 text-red-500 font-bold text-lg">Bienvenido a Toro's Wok</h2>
+<p className="mt-4 text-white">Explora los sabores intensos y exóticos de Asia</p>
 </motion.div>
 
   {/* Plato estrella */}
@@ -68,7 +68,7 @@ transition={{ duration: 0.8 }}
       {/* Plato 1 */}
       <div className="bg-zinc-800 p-4 rounded-xl shadow-md text-center">
         <img src="../public/BaoBuns.jpg" alt="Bao buns" className="w-full h-40 object-cover rounded-md mb-2" />
-        <h4 className="text-lg text-red-400 font-semibold">Bao Buns BBQ</h4>
+        <h4 className="text-lg text-red-500 font-semibold">Bao Buns BBQ</h4>
         <p className="text-white text-sm">Panecillos al vapor rellenos de cerdo BBQ coreano.</p>
         <p className="text-red-300 font-semibold mt-1">$5.500 c/u</p>
       </div>
@@ -76,7 +76,7 @@ transition={{ duration: 0.8 }}
       {/* Plato 2 */}
       <div className="bg-zinc-800 p-4 rounded-xl shadow-md text-center">
         <img src="../public/UdonPicante.png" alt="Udon picante" className="w-full h-40 object-cover rounded-md mb-2" />
-        <h4 className="text-lg text-red-400 font-semibold">Udon Picante</h4>
+        <h4 className="text-lg text-red-500 font-semibold">Udon Picante</h4>
         <p className="text-white text-sm">Fideos gruesos con salsa picante y camarones salteados.</p>
         <p className="text-red-300 font-semibold mt-1">$7.000</p>
       </div>
@@ -84,12 +84,13 @@ transition={{ duration: 0.8 }}
       {/* Plato 3 */}
       <div className="bg-zinc-800 p-4 rounded-xl shadow-md text-center">
         <img src="../public/Mochi.jpg" alt="Mochis" className="w-full h-40 object-cover rounded-md mb-2" />
-        <h4 className="text-lg text-red-400 font-semibold">Mochis Artesanales</h4>
+        <h4 className="text-lg text-red-500 font-semibold">Mochis Artesanales</h4>
         <p className="text-white text-sm">Postre japonés relleno de pasta dulce con sabores variados.</p>
         <p className="text-red-300 font-semibold mt-1">$3.000 c/u</p>
       </div>
     </div>
   </motion.div>
+  
 
   {/* Pie de página */}
   <footer className="bg-zinc-800 text-white mt-16 p-6 rounded-xl">
