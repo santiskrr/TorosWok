@@ -7,8 +7,9 @@ body{
 
 .imagen{
     height: 10rem;
-    width: 15rem;
+    width: 20rem;
     transition: 0.5s ease-in-out;
+    
 }
 
 .plato .imagen:hover{
@@ -18,14 +19,14 @@ body{
 }
 
 .plato:hover{
-    margin: 5%;
+    margin: 3%;
     transition: 0.5s ;
 }
 
 .plato{
     background-color: rgba(0, 0, 0, 0.479);
     border-style: solid;
-    border-color: rgb(80, 255, 153);
+    border-color: rgb(255, 44, 97);
     border-width: 1px;
     transition: 0.3s ease-in-out;
 
