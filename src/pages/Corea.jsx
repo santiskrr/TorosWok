@@ -1,9 +1,8 @@
 import React from "react";
-
 function Corea() {
   return (
     <>
-    <div className="flex m-20">
+    <div className="bg-black flex m-20">
       <div className='plato rounded-2xl p-3 m-1 bg-black h-70 w-60'>
         <h1 className="text-center text-white">Ramen</h1>
           <div>

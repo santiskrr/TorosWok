@@ -1,7 +1,9 @@
 import React from "react";
 import { motion } from 'framer-motion';
 
-function China() {
+
+export default function China() {
+
   return (
     <>
     <div className='bg-black'>
@@ -105,5 +107,3 @@ function China() {
     </>
   );
 }
-
-export default China;
