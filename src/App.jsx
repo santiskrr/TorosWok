@@ -13,6 +13,7 @@ function App() {
     <Navbar/>
     <div className='bg-black'>
       <Routes>
+        
         <Route path="/" element={<Home />} />
         <Route path="/Japon" element={<Japon />} />
         <Route path="/China" element={<China />} />
