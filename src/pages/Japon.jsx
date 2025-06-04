@@ -2,7 +2,7 @@ import React from "react";
 import './Japon.css';
 
 import { motion } from 'framer-motion';
-import List from "../componentes/arreglo.jsx";
+import List from "../datos/arreglo.jsx";
 
 
 
@@ -10,12 +10,12 @@ function Japon() {
   
 
   return (
-    <div className='bg-red-300'>
+    <div className='bg-red-400'>
     <div className="text-center mb-12 text-white p-10">
       {/* Introducción */}
       <motion.div initial={{ opacity: 0, y: -40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
         <h2 className="text-red-600">Made in Japon</h2>
-        <p className="text-red-600">Desde naruto hasta hideo kojima</p>
+        <p className="text-red-600">Desde Naruto hasta Hideo Kojima</p>
       </motion.div>
 
       {/* Platos destacados */}

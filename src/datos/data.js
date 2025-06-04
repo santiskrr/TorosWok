@@ -5,6 +5,7 @@ export const platos = [{
   descripcion:'ramen',
   precio: '15.000$'
 },
+
 {
   id: 1,
   comida: 'Tsukemen',
@@ -12,6 +13,40 @@ export const platos = [{
   descripcion:'como ramen pero distinto',
   precio: '$17.000$'
 },
+
+{
+  id: 2,
+  comida: 'Yakitori de pollo',
+  imagen:"https://i.ytimg.com/vi/gv93YPgIZ_U/maxresdefault.jpg",
+  descripcion:'como ramen pero distinto',
+  precio: '$17.000$'
+},
+
+{
+  id: 3,
+  comida: 'Okonomiyaki',
+  imagen:"https://www.kikkoman.es/fileadmin/_processed_/8/b/csm_27-recipe-page-okonomiyaki-japanese-savoury-pancake-with-meat-buta-tama_desktop_01_968bbb5029.jpg",
+  descripcion:'como ramen pero distinto',
+  precio: '$17.000$'
+},
+
+{
+  id: 4,
+  comida: 'Sushi',
+  imagen:"https://media.traveler.es/photos/633bec4ac1242ab11aad16c2/master/w_1600%2Cc_limit/GettyImages-1312786697.jpg",
+  descripcion:'como ramen pero distinto',
+  precio: '$17.000$'
+},
+
+{
+  id: 5,
+  comida: 'Yakiniku',
+  imagen:"https://media.traveler.es/photos/63c937c603e04fc7ac9df53c/master/w_1600%2Cc_limit/iStock-453061093.jpg",
+  descripcion:'como ramen pero distinto',
+  precio: '$17.000$'
+},
+
+
 
 
 
