@@ -7,7 +7,8 @@ export default function Home() {
 return (
 
   
-    <div className="p-8 space-y-16">
+    <div className="p-8 bg-black bg-[url('/public/fondo.jpg')] bg-center bg-cover space-y-16">
+      
 {/* Bienvenida */} 
 <motion.div className="text-center" 
 initial={{ opacity: 0, y: -50 }} 
@@ -74,11 +75,13 @@ transition={{ duration: 0.8 }}
       </div>
 
       {/* Plato 2 */}
-      <div className="bg-zinc-800 p-4 rounded-xl shadow-md text-center">
+      <div className="bg-zinc-800 p-4 rounded-xl shadow-md text-center"
+      >
         <img src="../public/UdonPicante.png" alt="Udon picante" className="w-full h-40 object-cover rounded-md mb-2" />
         <h4 className="text-lg text-red-500 font-semibold">Udon Picante</h4>
         <p className="text-white text-sm">Fideos gruesos con salsa picante y camarones salteados.</p>
         <p className="text-red-300 font-semibold mt-1">$7.000</p>
+        
       </div>
 
       {/* Plato 3 */}
@@ -113,6 +116,8 @@ transition={{ duration: 0.8 }}
     </div>
     <div className="text-center text-xs text-zinc-400 mt-4">© 2025 Toro's Wok. Todos los derechos reservados.</div>
   </footer>
+ 
 </div>
+
 );
 }

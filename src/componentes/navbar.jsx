@@ -3,7 +3,7 @@ import React from "react";
 
 function Navbar() {
   return (
-  <nav className="relative rounded-2xl bg-black bg-[url('/public/banner2.jpg')] bg-cover bg-center p-4 flex items-center border-1 border-[#ff0000] shadow-[0_0_5px_#ff0000] overflow-hidden">
+  <nav className="relative bg-black bg-[url('/public/banner2.jpg')] bg-cover bg-center p-4 flex items-center border-1 border-[#ff0000] shadow-[0_0_5px_#ff0000] overflow-hidden mx-auto">
   {/* GIF de partículas superpuesto */}
   <img
     src="/public/212830_small.gif"

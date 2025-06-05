@@ -42,7 +42,7 @@ const secciones = [
 export default function China() {
 
   return (
-    <div className="text-center mb-12 text-white p-10">
+    <div className="text-center bg-black mb-12 text-white p-10">
       {/* Introducción */}
       <motion.div initial={{ opacity: 0, y: -40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
         <h2>Cocina China Tradicional</h2>
@@ -80,7 +80,7 @@ export default function China() {
           <img key={index} src={gif.src} alt={gif.alt} className="w-1/2 h-full object-cover" />
         ))}
       </div>
-      <div className="absolute inset-0 bg-yellow-600/80 backdrop-blur"></div>
+      <div className="absolute inset-0 bg-yellow-600/80"></div>
 
       {/* CONTENIDO */}
       <div className="relative z-10 p-6">
