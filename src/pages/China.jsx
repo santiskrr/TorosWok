@@ -5,19 +5,19 @@ const platos = [
   {
     nombre: "Pollo Kung Pao",
     descripcion: "Pollo salteado con maní, chiles secos y salsa especial.",
-    precio: "$10.90",
+    precio: "$6.700",
     imagen: "./public/KunPao.jpg",
   },
   {
     nombre: "Arroz Frito Especial",
     descripcion: "Arroz con vegetales, cerdo, camarones y huevo salteado.",
-    precio: "$8.50",
+    precio: "$5.000",
     imagen: "./public/ArrozFrito.jpg",
   },
   {
     nombre: "Dumplings al vapor",
     descripcion: "Rellenos de cerdo, repollo y cebollín con salsa de soja.",
-    precio: "$6.80",
+    precio: "$9.000 6/u",
     imagen: "./Dumplin.jpg",
   },
 ];
@@ -27,9 +27,9 @@ const gifs = [
 ];
 
 const combo = {
-  titulo: "🎁 Combo del Día",
+  titulo: "Combo del Día",
   descripcion: "6 Dumplings + Arroz Frito + Bebida",
-  precio: "Solo $",
+  precio: "Solo $12.500",
 };
 const secciones = [
   {
@@ -39,10 +39,19 @@ const secciones = [
   }
 ];
 
+
 export default function China() {
 
   return (
-    <div className="text-center bg-black mb-12 text-white p-10">
+        <div className="p-8 bg-black bg-[url('/public/FondoChina2.jpg')] bg-center bg-cover space-y-16 relative">
+  {/* GIF superpuesto */}
+  <img 
+    src="/public/212830_small.gif" 
+    alt="Animación" 
+    className="absolute inset-0 w-full h-full object-cover mix-blend-screen opacity-70"
+  />
+
+    <div className="text-center mb-12 p-10 text-4x1 text-yellow-400 font-bold text-lg">
       {/* Introducción */}
       <motion.div initial={{ opacity: 0, y: -40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
         <h2>Cocina China Tradicional</h2>
@@ -118,6 +127,7 @@ export default function China() {
           </div>
         </motion.div>
       ))}
+    </div>
     </div>
     </div>
   );
