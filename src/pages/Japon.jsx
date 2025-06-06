@@ -22,19 +22,10 @@ function Japon() {
             </div>
             
           </motion.div>
-
-          {/* Platos destacados */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 p-10"
-          >
-          </motion.div>
     <List />
-
-
-      </div>   {/* Mini video */}
+      </div>  
+       
+      {/* Mini video */}
           <div className="m-20">
             <video
               src="/public/Video.mp4"
@@ -58,8 +49,6 @@ function Japon() {
               <p className="text-zinc-300">Nuestros chefs traen técnicas auténticas de la cocina china y las fusionan con ingredientes frescos de la región para darte una experiencia inolvidable. ¡Cada plato es una obra de arte!</p>
             </div>
           </motion.div>
-
-       
         </div>
     </div>  );
 }
