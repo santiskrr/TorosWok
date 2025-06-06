@@ -6,6 +6,7 @@ import Corea from './pages/Corea.jsx';
 import Home from './pages/Home.jsx';
 import './App.css'
 import React from 'react';
+import Footer from './componentes/Footer.jsx';
 
 function App() {
   return (
@@ -19,7 +20,10 @@ function App() {
         <Route path="/China" element={<China />} />
         <Route path="/Corea" element={<Corea />} />
       </Routes>
+      <Footer/>
       </div>
+        
+
     </>
   );
 }

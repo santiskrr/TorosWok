@@ -1,6 +1,5 @@
 import React from "react";
 import './Japon.css';
-
 import { motion } from 'framer-motion';
 import List from "../datos/arreglo.jsx";
 
@@ -10,14 +9,15 @@ function Japon() {
   
 
   return (
-    <div className="">
+    
         <div className='bg-red-400'>
-        <div className="text-center mb-12 text-white p-10">
+      <div className="">
+        <div className="text-center f mb-12 text-white p-10">
           <motion.div initial={{ opacity: 0, y: -40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
        
               <div className="ml-40 mr-40 h-60 p-10 bg-no-repeat bg-cover rounded-lg bg-center bg-[url(https://th.bing.com/th/id/R.3ec05aebbde8ed6ff516d36456821cc8?rik=MrqPooaxMv4nog&pid=ImgRaw&r=0)]">
             <h2 className="text-red-600">Made in Japon</h2>
-            <p className="text-slate-600 font-(family-:Orbitron)"><p className="text-orange-600">Desde Naruto<p className="text-gray-500">hasta</p></p>Hideo Kojima</p>
+            <p className="text-slate-100 font-orbitron"><p className="text-orange-600">Desde Naruto<p className="text-gray-500">hasta</p></p>Hideo Kojima</p>
             
             </div>
             
@@ -59,26 +59,7 @@ function Japon() {
             </div>
           </motion.div>
 
-          <footer className="bg-zinc-800 text-white mt-16 p-6 rounded-xl">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
-          <div>
-            <h5 className="text-red-400 font-bold mb-2">Toro's Wok</h5>
-            <p className="text-sm">Auténtica cocina asiática con ingredientes frescos y recetas tradicionales.</p>
-          </div>
-          <div>
-            <h5 className="text-red-400 font-bold mb-2">Contacto</h5>
-            <p className="text-sm"> Urquiza 583</p>
-            <p className="text-sm"> +54 2945-656339</p>
-            <p className="text-sm"> contacto@toros.com</p>
-          </div>
-          <div>
-            <h5 className="text-red-400 font-bold mb-2">Síguenos</h5>
-            <p className="text-sm">🔗 Instagram / Facebook / TikTok</p>
-            <p className="text-sm">@toroswok</p>
-          </div>
-        </div>
-        <div className="text-center text-xs text-zinc-400 mt-4">© 2025 Toro's Wok. Todos los derechos reservados.</div>
-      </footer>
+       
         </div>
     </div>  );
 }
