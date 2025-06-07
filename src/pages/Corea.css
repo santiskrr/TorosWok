@@ -1,32 +1,72 @@
-body{
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
 
+.do-hyeon {
+  font-family: "Do Hyeon", sans-serif;
+  font-optical-sizing: auto;
 }
 
-.imagen{
-    height: 10rem;
-    width: 20rem;
-    transition: 0.5s ease-in-out;
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
 }
 
-.plato .imagen:hover{
-    padding: -4%;
-    border-radius: 40px;
-    transition: 0.5s;
+
+.imagen {
+  height: 10rem;
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
 }
 
-.plato:hover{
-    margin: -3%;
-    transition: 0.5s ;
+
+.platoCorea .imagen:hover {
+  transform: scale(1.05);
+  border-radius: 12px;
 }
 
-.plato{
-    border-style: solid;
-    border-color: rgba(50, 155, 253, 0.61);
-    border-width: 1px;
-    transition: 0.5s ease-in-out;
 
+.platoCorea {
+  border-style: solid;
+  border-color: rgba(50, 155, 253, 0.61);
+  border-width: 1px;
+  background-color: rgba(0, 0, 0, 0.479);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  max-width: 350px; 
 }
 
-h2{
-    font-family: fantasy;
+@media (max-width: 768px) {
+  .mx-10,
+  .md\:mx-40 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  video,
+  img {
+    height: 50vh;
+  }
+
+  .platoCorea {
+    max-width: 100%;
+  }
 }
+
+.neon-border { position: relative; border: none;  
+  box-shadow: 0 0 10px #ff00ff, 0 0 20px #00f7ff, 0 0 30px #ff00ff, 0 0 40px #00f7ff; 
+  animation: neonRotate 3s linear infinite; } 
+  
+  @keyframes 
+  neonRotate { 0% { box-shadow: 0 0 10px #ff00ff, 0 0 20px #00f7ff, 0 0 30px #ff00ff, 0 0 40px #00f7ff;}
+  25% { box-shadow: 0 0 10px #00f7ff, 0 0 20px #ff00ff, 0 0 30px #00f7ff, 0 0 40px #ff00ff; }
+  50% { box-shadow: 0 0 10px #ff00ff, 0 0 20px #00f7ff, 0 0 30px #ff00ff, 0 0 40px #00f7ff; }
+  75% { box-shadow: 0 0 10px #00f7ff, 0 0 20px #ff00ff, 0 0 30px #00f7ff, 0 0 40px #ff00ff; }
+  100% { box-shadow: 0 0 10px #ff00ff, 0 0 20px #00f7ff, 0 0 30px #ff00ff, 0 0 40px #00f7ff; } }
