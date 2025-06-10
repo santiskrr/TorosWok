@@ -5,7 +5,7 @@ import GradientText from './GradientText.jsx';
 
 
 
-function Navbar() {
+export default function Navbar () {
   return (
   <nav className="relative rounded-2xl bg-black bg-[url('/public/banner2.jpg')] bg-cover bg-center p-4 flex items-center border-1 border-[#ff0000] shadow-[0_0_5px_#ff0000] overflow-hidden">
 
@@ -57,6 +57,5 @@ function Navbar() {
 </nav>
 
   );
-}
+ }
 
-export default Navbar;
