@@ -1,6 +1,9 @@
 import { Link } from 'react-router';
 import React from "react";
 import "../index.css"
+import GradientText from './GradientText.jsx';
+
+
 
 function Navbar() {
   return (
@@ -22,14 +25,23 @@ function Navbar() {
       alt="Banner"
       className="h-12 w-auto object-contain"
     />
-    <span className="text-white text-lg trade-winds-regular underline"> Comida Tradicional Asiática</span>
+  
+<GradientText
+  colors={["#40ffaa", "#40ffaa", "#ff0000", "#40ffaa", "#40ffaa"]}
+  animationSpeed={5}
+  showBorder={false}
+  className=""
+>
+  Comida Tradicional Asiática
+</GradientText>
+     
   </div>
 
 
   <div className="relative flex flex-grow justify-center">
-    <ul className="flex gap-20 orbitron">
+    <ul className="flex gap-20 spectral-sc-regular">
       <li>
-        <Link to="/" className="text-white shadow-md hover:shadow-white hover:text-green-600">Inicio</Link>
+        <Link to="/" className=" text-white shadow-md hover:shadow-green-600 hover:text-green-400">Inicio</Link>
       </li>
       <li>
         <Link to="/China" className="text-white shadow-md hover:shadow-yellow-600 hover:text-yellow-400">China</Link>

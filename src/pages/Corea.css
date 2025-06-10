@@ -59,14 +59,3 @@ body {
     max-width: 100%;
   }
 }
-
-.neon-border { position: relative; border: none;  
-  box-shadow: 0 0 10px #ff00ff, 0 0 20px #00f7ff, 0 0 30px #ff00ff, 0 0 40px #00f7ff; 
-  animation: neonRotate 3s linear infinite; } 
-  
-  @keyframes 
-  neonRotate { 0% { box-shadow: 0 0 10px #ff00ff, 0 0 20px #00f7ff, 0 0 30px #ff00ff, 0 0 40px #00f7ff;}
-  25% { box-shadow: 0 0 10px #00f7ff, 0 0 20px #ff00ff, 0 0 30px #00f7ff, 0 0 40px #ff00ff; }
-  50% { box-shadow: 0 0 10px #ff00ff, 0 0 20px #00f7ff, 0 0 30px #ff00ff, 0 0 40px #00f7ff; }
-  75% { box-shadow: 0 0 10px #00f7ff, 0 0 20px #ff00ff, 0 0 30px #00f7ff, 0 0 40px #ff00ff; }
-  100% { box-shadow: 0 0 10px #ff00ff, 0 0 20px #00f7ff, 0 0 30px #ff00ff, 0 0 40px #00f7ff; } }

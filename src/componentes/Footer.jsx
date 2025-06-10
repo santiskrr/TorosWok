@@ -1,7 +1,8 @@
  import React from "react"
  import { SiInstagram } from "react-icons/si";
-import { SiFacebook } from "react-icons/si";
+import { IoLogoFacebook } from "react-icons/io";
 import { FaTiktok } from "react-icons/fa";
+import GlitchText from './GlitchText.jsx';
 
  export default function Footer(){
 
@@ -20,13 +21,17 @@ import { FaTiktok } from "react-icons/fa";
           <div>
             <h5 className="text-red-400 font-bold mb-2">Síguenos</h5>
             <p className="text-sm">
-              
-            <a href="https://www.instagram.com/toroswok.sushi/p/ChX2jerprcS/" target="_blank" rel="noopener noreferrer"><SiInstagram />Instagram</a>
+            
+
+            <div className="relative flex">
+            <a href="https://www.instagram.com/toroswok.sushi/p/ChX2jerprcS/" target="_blank" rel="noopener noreferrer"><SiInstagram className="h-15 w-15 p-2 rounded-2xl bg-gradient-to-t from-[#fcba03] via-[#f21167] to-[#870af5] m-5" /></a>
             
              
-            <a href="https://www.facebook.com/toroswok/" target="_blank" rel="noopener noreferrer"><SiFacebook />Facebook</a>
+            <a href="https://www.facebook.com/toroswok/" target="_blank" rel="noopener noreferrer"><IoLogoFacebook  className="h-20 w-20 text-blue-500 bg-blue mt-2"/></a>
              
-            <a href="https://www.instagram.com/toroswok.sushi/p/ChX2jerprcS/" target="_blank" rel="noopener noreferrer"><FaTiktok />TikTok</a>
+            
+             <a href="https://www.instagram.com/toroswok.sushi/p/ChX2jerprcS/" target="_blank" rel="noopener noreferrer"><FaTiktok className="text-red-500 h-15 w-15 ml-5.5 mb-2 mt-5 mr-1 absolute"/><FaTiktok className="h-15 w-15 m-4.5 absolute text-cyan-400 "/><FaTiktok className="h-15 w-15 m-5 text-black relative"/></a>
+             </div>
             </p>
             
           </div>

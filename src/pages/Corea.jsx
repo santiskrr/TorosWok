@@ -24,7 +24,7 @@ function Corea() {
                 <h2 className="text-4xl font-bold text-red-500 bg-black/70 Do Hyeon">
                   Made in Korea
                 </h2>
-                <p className="text-lg shadow-md hover:shadow-violet-500 bg-black/60 text-violet-400 mt-2 Do Hyeon ">
+                <p className="text-lg shadow-xl shadow-md hover:shadow-violet-500 bg-black/60 text-violet-400 mt-2 Do Hyeon ">
                   음식, 음료 및 지원 강
                 </p>
               </div>
