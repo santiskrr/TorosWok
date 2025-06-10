@@ -21,7 +21,7 @@ function App() {
         <Route path="/Corea" element={<Corea />} />
       </Routes>
       <Footer/>
-      </div>
+      
         
 
     </>
