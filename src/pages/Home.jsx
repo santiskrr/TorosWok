@@ -7,7 +7,7 @@ export default function Home() {
 return (
 
   
-    <div className="p-8 space-y-16">
+    <div className="p-8 space-y-16 bg-black bg-[url('/public/Fondo.jpg')] bg-cover bg-center">
 {/* Bienvenida */} 
 <motion.div className="text-center" 
 initial={{ opacity: 0, y: -50 }} 
