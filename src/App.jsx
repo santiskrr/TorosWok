@@ -11,7 +11,7 @@ function App() {
   return (
     <>
     <Navbar/>
-    <div className=''>
+    
       <Routes>
         
         <Route path="/" element={<Home />} />
@@ -19,7 +19,7 @@ function App() {
         <Route path="/China" element={<China />} />
         <Route path="/Corea" element={<Corea />} />
       </Routes>
-      </div>
+      
     </>
   );
 }

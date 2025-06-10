@@ -44,12 +44,6 @@ export default function China() {
 
   return (
         <div className="p-8 bg-black bg-[url('/public/FondoChina2.jpg')] bg-center bg-cover space-y-16 relative">
-  {/* GIF superpuesto */}
-  <img 
-    src="/public/212830_small.gif" 
-    alt="Animación" 
-    className="absolute inset-0 w-full h-full object-cover mix-blend-screen opacity-70"
-  />
 
     <div className="text-center mb-12 p-10 text-4x1 text-yellow-400 font-bold text-lg">
       {/* Introducción */}

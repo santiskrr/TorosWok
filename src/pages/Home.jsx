@@ -31,12 +31,6 @@ const platosEstrella = [
   }
 ]
 
-const agregarPlato = (plato) => {
-  const pedidoActual = JSON.parse(localStorage.getItem("pedido")) || [];
-  pedidoActual.push(plato);
-  localStorage.setItem("pedido", JSON.stringify(pedidoActual));
-};
-
 export default function Home() { 
     
 return (
@@ -104,38 +98,12 @@ transition={{ duration: 0.8 }}
         <h4 className="text-lg text-red-500 font-semibold">{plato.nombre}</h4>
         <p className="text-white text-sm">{plato.descripcion}</p>
         <p className="text-red-300 font-semibold mt-1">{plato.precio}</p>
-        <button className="mt-3 bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition"
-          onClick={() => agregarPlato(plato.nombre)}>
-          Agregar al pedido
-        </button>
+        
       </div>
     ))}
   </div>
 </motion.div>
 
-  
-
-  {/* Pie de página */}
-  <footer className="bg-zinc-800 text-white mt-16 p-6 rounded-xl">
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
-      <div>
-        <h5 className="text-red-400 font-bold mb-2">Toro's Wok</h5>
-        <p className="text-sm">Auténtica cocina asiática con ingredientes frescos y recetas tradicionales.</p>
-      </div>
-      <div>
-        <h5 className="text-red-400 font-bold mb-2">Contacto</h5>
-        <p className="text-sm"> Urquiza 583</p>
-        <p className="text-sm"> +54 2945-656339</p>
-        <p className="text-sm"> contacto@toros.com</p>
-      </div>
-      <div>
-        <h5 className="text-red-400 font-bold mb-2">Síguenos</h5>
-        <p className="text-sm">🔗 Instagram / Facebook / TikTok</p>
-        <p className="text-sm">@toroswok</p>
-      </div>
-    </div>
-    <div className="text-center text-xs text-zinc-400 mt-4">© 2025 Toro's Wok. Todos los derechos reservados.</div>
-  </footer>
  
 </div>
 
