@@ -28,9 +28,9 @@ body {
 
 .platoCorea {
   border-style: solid;
-  border-color: rgba(50, 155, 253, 0.61);
-  border-width: 1px;
-  background-color: rgba(0, 0, 0, 0.479);
+  border-color: rgb(0, 255, 136);
+  border-width: 0.5px;
+  background-color: rgba(0, 0, 0, 0.274);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   max-width: 350px; 
 }

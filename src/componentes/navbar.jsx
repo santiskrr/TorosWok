@@ -2,12 +2,12 @@ import { Link } from 'react-router';
 import React from "react";
 import "../index.css"
 import GradientText from './GradientText.jsx';
-
+import { TiShoppingCart } from "react-icons/ti";
 
 
 export default function Navbar () {
   return (
-  <nav className="relative rounded-2xl bg-black bg-[url('/public/banner2.jpg')] bg-cover bg-center p-4 flex items-center border-1 border-[#ff0000] shadow-[0_0_5px_#ff0000] overflow-hidden">
+  <nav className="relative rounded-2xl bg-black bg-[url(/public/banner2.jpg)] bg-cover bg-center p-4 flex items-center shadow-[0_0_5px_#ff0000] overflow-hidden">
 
   <img
     src="/public/212830_small.gif"
@@ -51,6 +51,9 @@ export default function Navbar () {
       </li>
       <li>
         <Link to="/Japon" className="text-white shadow-md hover:shadow-red-600 hover:text-red-600">Japón</Link>
+      </li>
+      <li>
+        <Link to="/Carrito" className="text-white "><TiShoppingCart className='h-10 w-10 shadow-md hover:shadow-violet-600 hover:text-violet-600'/></Link>
       </li>
     </ul>
   </div>

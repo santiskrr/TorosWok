@@ -1,5 +1,7 @@
 import { platos } from './data.js';
 import React from 'react';
+import { IoCartOutline } from "react-icons/io5";
+
 
 export default function List() {
   const listItems = platos.map(plato => (
@@ -12,7 +14,7 @@ export default function List() {
         />
         <h3 className="text-xl font-semibold text-white orbitron">{plato.comida}</h3>
         <p className="text-sm text-zinc-300 mt-1 orbitron line-clamp-3">{plato.descripcion}</p>
-        <p className="mt-2 text-green-500 orbitron">{plato.precio}</p>
+        <p className="mt-2 text-green-500 orbitron">{plato.precio}<IoCartOutline className='h-7 w-7'/></p>
       </div>
     </div>
   ));
