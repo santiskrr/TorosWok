@@ -7,14 +7,17 @@ import Home from './pages/Home.jsx';
 import './App.css'
 import React from 'react';
 import Footer from './componentes/Footer.jsx';
+import { CartProvider } from "./context/CartContext";
+
 
 function App() {
   return (
     <>
+    <CartProvider>
     <Navbar/>
     <div className=''>
       <Routes>
-        
+       
         <Route path="/" element={<Home />} />
         <Route path="/Japon" element={<Japon />} />
         <Route path="/China" element={<China />} />
@@ -22,8 +25,8 @@ function App() {
       </Routes>
       <Footer/>
       </div>
-        
-
+    </CartProvider>    
+ 
     </>
   );
 }

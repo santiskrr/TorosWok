@@ -5,19 +5,19 @@ const platos = [
   {
     nombre: "Pollo Kung Pao",
     descripcion: "Pollo salteado con maní, chiles secos y salsa especial.",
-    precio: "$10.90",
+    precio: "$15.000",
     imagen: "./public/KunPao.jpg",
   },
   {
     nombre: "Arroz Frito Especial",
     descripcion: "Arroz con vegetales, cerdo, camarones y huevo salteado.",
-    precio: "$8.50",
+    precio: "$5.500",
     imagen: "./public/ArrozFrito.jpg",
   },
   {
     nombre: "Dumplings al vapor",
     descripcion: "Rellenos de cerdo, repollo y cebollín con salsa de soja.",
-    precio: "$6.80",
+    precio: "$4.000 c/u.",
     imagen: "./Dumplin.jpg",
   },
 ];
@@ -29,7 +29,7 @@ const gifs = [
 const combo = {
   titulo: "🎁 Combo del Día",
   descripcion: "6 Dumplings + Arroz Frito + Bebida",
-  precio: "Solo $",
+  precio: "Solo $35.000",
 };
 const secciones = [
   {
@@ -43,7 +43,7 @@ export default function China() {
 
   return (
     <>
-    <div className='bg-black'>
+    <div className="p-8 space-y-16 bg-black bg-[url('/public/FondoChina2.jpg')] bg-cover bg-center">
     <div className="text-center mb-12 text-white p-10">
       {/* Introducción */}
       <motion.div initial={{ opacity: 0, y: -40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
