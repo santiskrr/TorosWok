@@ -1,42 +1,45 @@
-import React from "react";
-import { IoAdd } from "react-icons/io5";
-import { FiMinus } from "react-icons/fi";
-import Listcarrito from "../datos/ListaCarrito";
+import React, { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 
-function Carrito() {
-  return (
-    <>
-    <div className="contenedor-principal bg-white">
-        <div className="contenedor-productos text-center">
-            <div className="marcoCompra">
-                <div className="titulo">
-                    Productos
-                </div>
+export default function Carrito() {
+    const { cart } = useContext(CartContext);
 
-                <div className="grid">
+    // Generar el mensaje de WhatsApp con los productos agregados
+    const enviarPedido = () => {
+        if (cart.length === 0) {
+            alert("Tu carrito está vacío.");
+            return;
+        }
 
-                    <div className="contenedor-imagendescripcion">
-                        <Listcarrito/>
-                    </div>
+        const mensaje = cart.map(item => `- ${item.name}: ${item.price} x ${item.quantity}`).join("\n");
+        const whatsappMensaje = `Hola, quiero hacer un pedido:\n${mensaje}`;
+        
+        window.open(`https://wa.me/?text=${encodeURIComponent(whatsappMensaje)}`, "_blank");
+    };
 
-                    <div className="contenedor-masmenos border border-red-500 rounded-xl  ml-140 mr-140">
-                        <span><button><FiMinus className="border h-5 w-5 m-2"/></button></span>
-                        <span className=" p-1 m-1">1</span>
-                        <span><button><IoAdd className=" border h-5 w-5 m-2"/></button></span>
-                    </div>
+    return (
+        <div className="p-8 bg-black rounded-xl text-white text-center">
+            <h1 className="text-3xl font-bold text-yellow-400 mb-6">🛒 Tu Pedido</h1>
 
-                </div>
-            </div>
+            {cart.length === 0 ? (
+                <p className="text-gray-400">El carrito está vacío.</p>
+            ) : (
+                <ul className="mb-4">
+                    {cart.map((item, index) => (
+                        <li key={index} className="text-lg">
+                            {item.name} - {item.price} x {item.quantity}
+                        </li>
+                    ))}
+                </ul>
+            )}
+
+            {/* Botón para enviar el pedido por WhatsApp */}
+            <button 
+                onClick={enviarPedido}
+                className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition"
+            >
+                📲 Enviar pedido por WhatsApp
+            </button>
         </div>
-
-
-
-    </div>
-    </>
-
-
-
-  );
+    );
 }
-
-export default Carrito

@@ -17,7 +17,7 @@ export default function Listcorea() {
         <h3 className="text-xl font-semibold text-white Do Hyeon">{plato.comida}</h3>
         <p className="text-sm mt-1 Do Hyeon line-clamp-3">{plato.descripcion}</p>
         <p className="mt-2 text-green-500 font-bold Do Hyeon">{plato.precio}<button 
-                                  className="mt-4 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition"
+                                  className="m-4 px-4 py-2 bg-green-400 text-black rounded-lg hover:bg-red-700 transition"
                                   onClick={() => addToCart({ name: plato.comida, price: plato.precio})}
                               >
                                   Hacer pedido

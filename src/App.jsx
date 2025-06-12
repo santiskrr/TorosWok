@@ -9,6 +9,7 @@ import React from 'react';
 import Footer from './componentes/Footer.jsx';
 import { CartProvider } from "./context/CartContext";
 import BotonCart from './componentes/BotonCart.jsx';
+import Carrito from './pages/Carrito.jsx';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/Japon" element={<Japon />} />
         <Route path="/China" element={<China />} />
         <Route path="/Corea" element={<Corea />} />
+        <Route path="/Carrito" element={<Carrito />} />
         
       </Routes>
       <Footer/>

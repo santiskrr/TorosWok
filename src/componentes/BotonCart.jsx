@@ -42,7 +42,7 @@ export default function BotonCart(){const { cart, increaseQuantity, decreaseQuan
                                 ))}
                             </ul>
                         )}
-                        <Link to="/" className="mt-2 block text-center px-4 py-2 bg-red-400 text-white rounded-lg hover:bg-red-700 transition">
+                        <Link to="/Carrito" className="mt-2 block text-center px-4 py-2 bg-red-400 text-white rounded-lg hover:bg-red-700 transition">
                             Ir al carrito
                         </Link>
                     </div>
