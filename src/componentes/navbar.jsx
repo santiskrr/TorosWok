@@ -3,6 +3,9 @@ import { Link } from "react-router";
 import React from "react";
 import "../index.css";
 import GradientText from "./GradientText.jsx";
+import logo from "/public/logo_toroswok.svg"
+
+
 
 const Navbar = () => {
  
@@ -11,7 +14,7 @@ const Navbar = () => {
         <nav className="navegacion relative object-cover rounded-2xl bg-black bg-[url('/public/banner2.jpg')] bg-cover bg-center p-4 items-center border-1 border-[#ff0000] shadow-[0_0_5px_#ff0000]">
             {/* Logo y menú */}
              <div className="flex justify-center">
-                <img src="/public/logo_toroswok.svg"  className="max-h-[100px] h-auto max-w-[100px] w-auto" />
+                <img src={logo}  className="max-h-[100px] h-auto max-w-[100px] w-auto" />
             </div>
             <div className="relative flex items-center gap-4 p-2 rounded-lg trade-winds-regular">
                 <GradientText colors={["#40ffaa", "#40ffaa", "#ff0000", "#40ffaa", "#40ffaa"]} animationSpeed={5} showBorder={false}>
