@@ -8,23 +8,24 @@ import './App.css'
 import React from 'react';
 import Footer from './componentes/Footer.jsx';
 import { CartProvider } from "./context/CartContext";
-
+import BotonCart from './componentes/BotonCart.jsx';
 
 function App() {
   return (
     <>
+   
     <CartProvider>
     <Navbar/>
-    <div className=''>
+    <BotonCart />
       <Routes>
        
         <Route path="/" element={<Home />} />
         <Route path="/Japon" element={<Japon />} />
         <Route path="/China" element={<China />} />
         <Route path="/Corea" element={<Corea />} />
+        
       </Routes>
       <Footer/>
-      </div>
     </CartProvider>    
  
     </>

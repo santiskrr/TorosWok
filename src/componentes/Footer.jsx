@@ -2,11 +2,11 @@
  import { SiInstagram } from "react-icons/si";
 import { IoLogoFacebook } from "react-icons/io";
 import { FaTiktok } from "react-icons/fa";
-import GlitchText from './GlitchText.jsx';
+
 
  export default function Footer(){
 
-    return(<footer className="bg-zinc-800 text-white mt-16 p-6 rounded-xl">
+    return(<footer className="bg-zinc-800 text-white mt-1 p-6 rounded-xl">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
           <div>
             <h5 className="text-red-600 font-bold mb-2">Toro's Wok</h5>

@@ -1,5 +1,5 @@
-import React from "react";
 import { motion } from 'framer-motion';
+import React from 'react';
 
 const platos = [
   {
@@ -27,7 +27,7 @@ const gifs = [
 ];
 
 const combo = {
-  titulo: "🎁 Combo del Día",
+  titulo: "Combo del Día",
   descripcion: "6 Dumplings + Arroz Frito + Bebida",
   precio: "Solo $35.000",
 };
@@ -38,6 +38,7 @@ const secciones = [
     descripcion: "Nuestros chefs traen técnicas auténticas de la cocina china y las fusionan con ingredientes frescos de la región para darte una experiencia inolvidable. ¡Cada plato es una obra de arte!"
   }
 ];
+
 
 export default function China() {
 
@@ -82,7 +83,7 @@ export default function China() {
           <img key={index} src={gif.src} alt={gif.alt} className="w-1/2 h-full object-cover" />
         ))}
       </div>
-      <div className="absolute inset-0 bg-yellow-600/80 backdrop-blur"></div>
+      <div className="absolute inset-0 bg-yellow-600/80"></div>
 
       {/* CONTENIDO */}
       <div className="relative z-10 p-6">
@@ -92,7 +93,7 @@ export default function China() {
       </div>
     </motion.div>
 
-   </div>   {/* Mini video */}
+      {/* Mini video */}
       <div className="mt-12">
         <video
           src="/public/Video.mp4"
@@ -120,6 +121,7 @@ export default function China() {
           </div>
         </motion.div>
       ))}
+    </div>
     </div>
     </div>
     </>
