@@ -4,7 +4,12 @@ import { CartContext } from "../context/CartContext";
 export default function Carrito() {
     const { cart } = useContext(CartContext);
 
-    // Generar el mensaje de WhatsApp con los productos agregados
+    // Calcular el total sumando los precios de los productos
+    const totalPrecio = cart.reduce((total, item) => {
+        return total + parseFloat(item.price.replace("$", "").replace(".", ""));
+    }, 0).toLocaleString("es-AR");
+
+    // Generar el mensaje de WhatsApp con los productos agregados y el total
     const enviarPedido = () => {
         if (cart.length === 0) {
             alert("Tu carrito está vacío.");
@@ -12,7 +17,7 @@ export default function Carrito() {
         }
 
         const mensaje = cart.map(item => `- ${item.name}: ${item.price} x ${item.quantity}`).join("\n");
-        const whatsappMensaje = `Hola, quiero hacer un pedido:\n${mensaje}`;
+        const whatsappMensaje = `Hola, quiero hacer un pedido:\n${mensaje}\n\nTotal: $${totalPrecio}`;
         
         window.open(`https://wa.me/?text=${encodeURIComponent(whatsappMensaje)}`, "_blank");
     };
@@ -24,13 +29,16 @@ export default function Carrito() {
             {cart.length === 0 ? (
                 <p className="text-gray-400">El carrito está vacío.</p>
             ) : (
-                <ul className="mb-4">
-                    {cart.map((item, index) => (
-                        <li key={index} className="text-lg">
-                            {item.name} - {item.price} x {item.quantity}
-                        </li>
-                    ))}
-                </ul>
+                <>
+                    <ul className="mb-4">
+                        {cart.map((item, index) => (
+                            <li key={index} className="text-lg">
+                                {item.name} - {item.price} x {item.quantity}
+                            </li>
+                        ))}
+                    </ul>
+                    <p className="text-xl font-bold text-green-400">Total: ${totalPrecio}</p>
+                </>
             )}
 
             {/* Botón para enviar el pedido por WhatsApp */}
