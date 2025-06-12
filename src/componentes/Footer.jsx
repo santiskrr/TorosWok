@@ -18,21 +18,16 @@ import { FaTiktok } from "react-icons/fa";
             <p className="text-sm"> +54 2945-656339</p>
             <p className="text-sm"> contacto@toros.com</p>
           </div>
-          <div>
+          <div className="" >
             <h5 className="text-red-600 font-bold mb-2">Síguenos</h5>
-            <p className="text-sm">
             
+            <div className="  flex justify-center md:block">
 
-            <div className="relative flex">
-            <a href="https://www.instagram.com/toroswok.sushi/p/ChX2jerprcS/" target="_blank" rel="noopener noreferrer"><SiInstagram className="h-15 w-15 p-2 rounded-2xl bg-gradient-to-t from-[#fcba03] via-[#f21167] to-[#870af5] m-5" /></a>
-            
-             
-            <a href="https://www.facebook.com/toroswok/" target="_blank" rel="noopener noreferrer"><IoLogoFacebook  className="h-20 w-20 text-blue-500 bg-blue mt-2"/></a>
-             
-            
-             <a href="https://www.instagram.com/toroswok.sushi/p/ChX2jerprcS/" target="_blank" rel="noopener noreferrer"><FaTiktok className="text-red-500 h-15 w-15 ml-5.5 mb-2 mt-5 mr-1 absolute"/><FaTiktok className="h-15 w-15 m-4.5 absolute text-cyan-400 "/><FaTiktok className="h-15 w-15 m-5 text-black relative"/></a>
+            <a href="https://www.instagram.com/toroswok.sushi/p/ChX2jerprcS/" target="_blank" rel="noopener noreferrer"><SiInstagram className="h-15 w-15 p-2 rounded-2xl bg-gradient-to-t from-[#fcba03] via-[#f21167] to-[#870af5] m-2.5" /></a>
+                         
+            <a href="https://www.facebook.com/toroswok/" target="_blank" rel="noopener noreferrer"><IoLogoFacebook  className="h-20 w-20 text-blue-500 bg-blue"/></a>
+
              </div>
-            </p>
             
           </div>
         </div>

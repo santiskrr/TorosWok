@@ -9,7 +9,7 @@ const Inicio = () => {
     const { addToCart } = useContext(CartContext);
 
     return (
-        <div className="p-8 space-y-16 bg-black bg-[url('/public/Fondo.jpg')] bg-cover bg-center bg-fixed mx-w-screen">
+        <div className=" space-y-16 bg-black bg-[url('/public/Fondo.jpg')] bg-cover bg-center bg-fixed mx-w-screen">
             <motion.div
                 initial={{ opacity: 0, y: -40 }}
                 animate={{ opacity: 1, y: 0 }}

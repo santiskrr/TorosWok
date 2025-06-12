@@ -12,7 +12,7 @@ export default function BotonCart(){const { cart, increaseQuantity, decreaseQuan
         <>
     
     {/* Ícono flotante del carrito */}
-            <div className="fixed bottom-4 right-4 z-50">
+            <div className="fixed bottom-4 right-5 z-50">
                 <button
                     className="bg-red-600 text-white p-3 rounded-full shadow-lg hover:bg-red-700 transition flex items-center"
                     onClick={() => setShowCart(!BotonCart)}
