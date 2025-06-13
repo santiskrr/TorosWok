@@ -11,7 +11,7 @@ const Navbar = () => {
  
 
     return (
-        <nav className="navegacion relative object-cover rounded-2xl bg-black bg-[url('/public/banner2.jpg')] bg-cover bg-center p-4 items-center border-1 border-[#ff0000] shadow-[0_0_5px_#ff0000]">
+        <nav className="navegacion relative object-cover rounded-2xl bg-black bg-[url('/public/banner2.jpg')] bg-cover bg-center p-4 items-center shadow-[0_0_5px_#ff0000]">
             {/* Logo y menú */}
              <div className="flex justify-center">
                 <img src={logo}  className="max-h-[100px] h-auto max-w-[100px] w-auto" />
@@ -29,7 +29,7 @@ const Navbar = () => {
                     <li><Link to="/China" className="text-white shadow-md hover:shadow-yellow-400 hover:text-yellow-400">China</Link></li>
                     <li><Link to="/Corea" className="text-white shadow-md hover:shadow-blue-400 hover:text-blue-400">Corea</Link></li>
                     <li><Link to="/Japon" className="text-white shadow-md hover:shadow-red-500 hover:text-red-600">Japón</Link></li>
-                    
+                    <li><Link to="/Bebidas" className="text-white shadow-md hover:shadow-red-500 hover:text-red-600">Bebidas</Link></li>
                 </ul>
                 
             </div>
