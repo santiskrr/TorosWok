@@ -2,14 +2,12 @@ import React, { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
 export default function Carrito() {
-    const { cart } = useContext(CartContext);
+    const { cart, decreaseQuantity } = useContext(CartContext);
 
-    // Calcular el total sumando los precios de los productos
     const totalPrecio = cart.reduce((total, item) => {
         return total + parseFloat(item.price.replace("$", "").replace(".", ""));
     }, 0).toLocaleString("es-AR");
 
-    // Generar el mensaje de WhatsApp con los productos agregados y el total
     const enviarPedido = () => {
         if (cart.length === 0) {
             alert("Tu carrito está vacío.");
@@ -32,8 +30,14 @@ export default function Carrito() {
                 <>
                     <ul className="mb-4">
                         {cart.map((item, index) => (
-                            <li key={index} className="text-lg">
+                            <li key={index} className="text-lg flex justify-between items-center">
                                 {item.name} - {item.price} x {item.quantity}
+                                <button 
+                                    className="ml-4 px-2 py-1 bg-red-600 text-white rounded-md hover:bg-red-700"
+                                    onClick={() => decreaseQuantity(item.name)}
+                                >
+                                    ➖
+                                </button>
                             </li>
                         ))}
                     </ul>
@@ -41,10 +45,9 @@ export default function Carrito() {
                 </>
             )}
 
-            {/* Botón para enviar el pedido por WhatsApp */}
             <button 
                 onClick={enviarPedido}
-                className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition"
+                className="mt-4 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition"
             >
                 📲 Enviar pedido por WhatsApp
             </button>

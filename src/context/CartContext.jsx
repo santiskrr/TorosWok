@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import React from "react";
+import React from 'react';
 
 export const CartContext = createContext();
 
@@ -18,20 +18,17 @@ export const CartProvider = ({ children }) => {
         });
     };
 
-    const removeFromCart = (index) => {
-        setCart(cart.filter((_, i) => i !== index));
-    };
-
-    const increaseQuantity = (name) => {
-        setCart(cart.map(item => item.name === name ? { ...item, quantity: item.quantity + 1 } : item));
-    };
-
     const decreaseQuantity = (name) => {
-        setCart(cart.map(item => item.name === name && item.quantity > 1 ? { ...item, quantity: item.quantity - 1 } : item));
+        setCart((prevCart) => {
+            const updatedCart = prevCart.map(item =>
+                item.name === name ? { ...item, quantity: item.quantity - 1 } : item
+            ).filter(item => item.quantity > 0); // Elimina si cantidad es 0
+            return updatedCart;
+        });
     };
 
     return (
-        <CartContext.Provider value={{ cart, addToCart, removeFromCart, increaseQuantity, decreaseQuantity }}>
+        <CartContext.Provider value={{ cart, addToCart, decreaseQuantity }}>
             {children}
         </CartContext.Provider>
     );
