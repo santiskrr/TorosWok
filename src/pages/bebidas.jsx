@@ -4,9 +4,12 @@ import ListBebidas from "../datos/arregloBebidas.jsx";
 import './bebidas.css'
 
 
+
 function Bebidas() {
   return (
-    <div className='bg-green-400'>
+
+    <>
+    <div className='bg-blue-200'>
       <div className="">
         <div className="text-center mb-12 text-white p-10">
           <motion.div
@@ -39,6 +42,7 @@ function Bebidas() {
 
       </div>
     </div>
+    </>
   );
 }
 

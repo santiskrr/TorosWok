@@ -11,10 +11,12 @@ import { CartProvider } from "./context/CartContext";
 import BotonCart from './componentes/BotonCart.jsx';
 import Carrito from './pages/Carrito.jsx';
 import Bebidas from './pages/bebidas.jsx';
+
+
 function App() {
   return (
     <>
-   
+
     <CartProvider>
     <Navbar/>
     <BotonCart />

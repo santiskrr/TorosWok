@@ -8,24 +8,23 @@ body {
 }
 
 
-.imagen {
+.imagenbebida {
   height: 10rem;
   width: 100%;
-  transition: transform 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 
 .platoBebidas .imagen:hover {
-  transform: scale(1.05);
   border-radius: 12px;
 }
 
 
 .platoBebidas {
   border-style: solid;
-  border-color: rgb(0, 255, 136);
+  border-color: rgb(0, 225, 255);
   border-width: 0.5px;
-  background-color: rgba(0, 97, 29, 0.801);
+  background-color: rgba(45, 81, 121, 0.863);
   max-width: 350px; 
 }
 
