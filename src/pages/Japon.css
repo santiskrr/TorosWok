@@ -1,35 +1,58 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
 
-body{
 
-    background-size: cover;
-    background-repeat: no-repeat;
-    
+.orbitron {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
 }
 
-.imagen{
-    height: 10rem;
-    width: 20rem;
-    transition: 0.5s ease-in-out;
-    
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.plato .imagen:hover{
-    padding: -4%;
-    border-radius: 40px;
-    transition: 0.5s;
+.imagen {
+  height: 10rem;
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
 }
 
-.plato:hover{
-    margin: -3%;
-    transition: 0.5s ;
+.plato .imagen:hover {
+  transform: scale(1.05);
+  border-radius: 12px;
 }
 
-.plato{
-    background-color: rgba(0, 0, 0, 0.479);
-    border-style: solid;
-    border-color: rgb(255, 44, 97);
-    border-width: 1px;
-    transition: 0.3s ease-in-out;
+.plato {
+  background-color: rgba(0, 0, 0, 0.308);
+  border-style: solid;
+  border-color: rgba(0, 255, 213, 0.788);
+  border-width: 2px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  max-width: 350px;
+}
 
+@media (max-width: 768px) {
+  .ml-40,
+  .mr-40 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  video,
+  img {
+    height: 50vh;
+  }
+
+  .plato {
+    max-width: 100%;
+  }
 }

@@ -1,4 +1,7 @@
  import React from "react"
+ import { SiInstagram } from "react-icons/si";
+import { SiFacebook } from "react-icons/si";
+import { FaTiktok } from "react-icons/fa";
 
  export default function Footer(){
 
@@ -16,8 +19,16 @@
           </div>
           <div>
             <h5 className="text-red-400 font-bold mb-2">Síguenos</h5>
-            <p className="text-sm">🔗 Instagram / Facebook / TikTok</p>
-            <p className="text-sm">@torosWok</p>
+            <p className="text-sm">
+              
+            <a href="https://www.instagram.com/toroswok.sushi/p/ChX2jerprcS/" target="_blank" rel="noopener noreferrer"><SiInstagram />Instagram</a>
+            
+             
+            <a href="https://www.facebook.com/toroswok/" target="_blank" rel="noopener noreferrer"><SiFacebook />Facebook</a>
+             
+            <a href="https://www.instagram.com/toroswok.sushi/p/ChX2jerprcS/" target="_blank" rel="noopener noreferrer"><FaTiktok />TikTok</a>
+            </p>
+            
           </div>
         </div>
         <div className="text-center text-xs text-zinc-400 mt-4">© 2025 Toro's Wok. Todos los derechos reservados.</div>

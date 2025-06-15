@@ -1,43 +1,59 @@
 import { Link } from 'react-router';
 import React from "react";
+import "../index.css"
+import { motion } from 'framer-motion';
+
+
+import GradientText from './GradientText.jsx'
+  
+
 
 function Navbar() {
   return (
   <nav className="relative rounded-2xl bg-black bg-[url('/public/banner2.jpg')] bg-cover bg-center p-4 flex items-center border-1 border-[#ff0000] shadow-[0_0_5px_#ff0000] overflow-hidden">
-  {/* GIF de partículas superpuesto */}
+
   <img
     src="/public/212830_small.gif"
     alt="Partículas"
     className="absolute inset-0 w-full h-full object-cover mix-blend-screen opacity-70"
   />
 
-  {/* Fondo semitransparente para mejorar la legibilidad */}
+
   <div className="absolute inset-0 bg-black/30 rounded-2xl"></div>
 
-  {/* Contenedor del logo y el texto */}
-  <div className="relative flex items-center gap-4 p-2 rounded-lg">
+
+  <div className="relative flex items-center gap-4 p-2 rounded-lg trade-winds-regular">
     <img
       src="/public/logo_toroswok.svg"
       alt="Banner"
       className="h-12 w-auto object-contain"
     />
-    <span className="text-white text-lg">/ Comida Tradicional Asiática</span>
+
+    <GradientText
+  colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+  animationSpeed={3}
+  showBorder={false}
+  className="custom-class"
+>
+  Comida Tradicional Asiática
+</GradientText>
+    
   </div>
 
-  {/* Contenedor de la lista de navegación */}
+
   <div className="relative flex flex-grow justify-center">
-    <ul className="flex gap-20">
+    <ul className="flex gap-20 ">
       <li>
-        <Link to="/" className="text-white hover:text-red-600">Inicio</Link>
+        <Link to="/" className="text-white shadow-md hover:shadow-white hover:text-green-600">Inicio</Link>
       </li>
       <li>
-        <Link to="/China" className="text-white hover:text-red-600">China</Link>
+        <Link to="/China" className="text-white shadow-md hover:shadow-yellow-600 hover:text-yellow-400">China</Link>
       </li>
       <li>
-        <Link to="/Corea" className="text-white hover:text-red-600">Corea</Link>
+        <Link to="/Corea" className="text-white shadow-md hover:shadow-blue-600 hover:text-blue-400">Corea</Link>
       </li>
       <li>
-        <Link to="/Japon" className="text-white hover:text-red-600">Japón</Link>
+        <Link to="/Japon" className="text-white shadow-md hover:shadow-red-600 hover:text-red-600">Japón</Link>
       </li>
     </ul>
   </div>
