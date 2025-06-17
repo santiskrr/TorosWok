@@ -1,26 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-
-const platos = [
-  {
-    nombre: "Pollo Kung Pao",
-    descripcion: "Pollo salteado con maní, chiles secos y salsa especial.",
-    precio: "$15.000",
-    imagen: "./public/KunPao.jpg",
-  },
-  {
-    nombre: "Arroz Frito Especial",
-    descripcion: "Arroz con vegetales, cerdo, camarones y huevo salteado.",
-    precio: "$5.500",
-    imagen: "./public/ArrozFrito.jpg",
-  },
-  {
-    nombre: "Dumplings al vapor",
-    descripcion: "Rellenos de cerdo, repollo y cebollín con salsa de soja.",
-    precio: "$4.000 c/u.",
-    imagen: "./public/Dumplin.jpg",
-  },
-];
+import ArregloChina from "../datos/ArregloChina";
 
 const gifs = [
   { src: "/public/dumplin.gif", alt: "Dumpling" },
@@ -70,30 +50,12 @@ export default function China() {
           </motion.div>
         </div>
 
-        {/* Platos con fondo negro y efectos rojos */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 p-10"
-        >
-          {platos.map((plato, index) => (
-            <div
-              key={index}
-              className="bg-black/80 rounded-xl p-4 shadow-md hover:scale-105 hover:shadow-red-500 transition-transform"
-            >
-              <img
-                src={plato.imagen}
-                alt={plato.nombre}
-                className="w-full h-40 object-cover rounded-md mb-3"
-              />
-             <h3 className="text-xl font-semibold text-red-400 text-center">{plato.nombre}</h3>
-              <p className="text-sm text-gray-300 mt-1 text-center">{plato.descripcion}</p>
-              <p className="mt-2 text-yellow-300 font-bold text-center">{plato.precio}</p>
-
-            </div>
-          ))}
-        </motion.div>
+        <div className="p-8 mx-w-screen">
+           
+            
+            {/* Platos chinos generados automáticamente */}
+            <ArregloChina />
+        </div>
 
         {/* Combo con fondo rojo en lugar de amarillo */}
         <motion.div
@@ -160,11 +122,6 @@ export default function China() {
 
 
 </div>
-
-
-
-        
-    
     </>
   );
 }
