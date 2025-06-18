@@ -18,6 +18,11 @@ export const CartProvider = ({ children }) => {
         });
     };
 
+
+    const increaseQuantity = (name) => {
+        setCart(cart.map(item => item.name === name ? { ...item, quantity: item.quantity + 1 } : item));
+    };
+
     const decreaseQuantity = (name) => {
         setCart((prevCart) => {
             const updatedCart = prevCart.map(item =>
@@ -28,7 +33,7 @@ export const CartProvider = ({ children }) => {
     };
 
     return (
-        <CartContext.Provider value={{ cart, addToCart, decreaseQuantity }}>
+        <CartContext.Provider value={{ cart, addToCart, decreaseQuantity, increaseQuantity }}>
             {children}
         </CartContext.Provider>
     );

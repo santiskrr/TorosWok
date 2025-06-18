@@ -22,9 +22,9 @@ body {
 
 .platoBebidas {
   border-style: solid;
-  border-color: rgb(0, 225, 255);
+  border-color: rgb(0, 255, 98);
   border-width: 0.5px;
-  background-color: rgba(45, 81, 121, 0.863);
+  background-color: rgba(0, 161, 100, 0.644);
   max-width: 350px; 
 }
 
@@ -51,4 +51,10 @@ body {
   .platoCorea {
     max-width: 100%;
   }
+}
+
+.precio{
+
+  text-shadow: -2px 3px 2px rgb(0, 0, 0);
+  color: rgb(0, 255, 42);
 }
