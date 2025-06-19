@@ -30,6 +30,7 @@ const Navbar = () => {
                     <li><Link to="/Corea" className="text-white shadow-md hover:shadow-blue-400 hover:text-blue-400">Corea</Link></li>
                     <li><Link to="/Japon" className="text-white shadow-md hover:shadow-red-400 hover:text-red-400">Japón</Link></li>
                     <li><Link to="/Bebidas" className="text-white shadow-md hover:shadow-blue-200 hover:text-blue-200">Bebidas</Link></li>
+                    <li><Link to="/Devs" className="text-white shadow-md hover:shadow-blue-200 hover:text-blue-200">Devs</Link></li>
                 </ul>
                 
             </div>

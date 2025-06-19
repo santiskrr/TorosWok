@@ -11,6 +11,7 @@ import { CartProvider } from "./context/CartContext";
 import BotonCart from './componentes/BotonCart.jsx';
 import Carrito from './pages/Carrito.jsx';
 import Bebidas from './pages/bebidas.jsx';
+import Devs from './pages/Devs.jsx';
 
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
         <Route path="/Corea" element={<Corea />} />
         <Route path="/Carrito" element={<Carrito />} />
         <Route path="/Bebidas" element={<Bebidas />} />
-        
+        <Route path="/Devs" element={<Devs />} />
       </Routes>
       <Footer/>
     </CartProvider>    
