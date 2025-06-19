@@ -1,46 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
+import ArregloChina from "../datos/ArregloChina";
+import ArregloPostres from "../datos/postresChina.jsx";
+import ArregloCombo from "../datos/ArregloCombo.jsx"
 
-const platos = [
-  {
-    nombre: "Pollo Kung Pao",
-    descripcion: "Pollo salteado con maní, chiles secos y salsa especial.",
-    precio: "$15.000",
-    imagen: "./public/KunPao.jpg",
-  },
-  {
-    nombre: "Arroz Frito Especial",
-    descripcion: "Arroz con vegetales, cerdo, camarones y huevo salteado.",
-    precio: "$5.500",
-    imagen: "./public/ArrozFrito.jpg",
-  },
-  {
-    nombre: "Dumplings al vapor",
-    descripcion: "Rellenos de cerdo, repollo y cebollín con salsa de soja.",
-    precio: "$4.000 c/u.",
-    imagen: "./public/Dumplin.jpg",
-  },
-];
 
-const gifs = [
-  { src: "/public/dumplin.gif", alt: "Dumpling" },
-  { src: "/public/Arroz.gif", alt: "Arroz Frito" },
-];
 
-const combo = {
-  titulo: "Combo del Día",
-  descripcion: "6 Dumplings + Arroz Frito + Bebida",
-  precio: "Solo $35.000",
-};
-
-const secciones = [
-  {
-    imagen: "/public/3975.png",
-    titulo: "Hecho por manos expertas",
-    descripcion:
-      "Nuestros chefs traen técnicas auténticas de la cocina china y las fusionan con ingredientes frescos de la región para darte una experiencia inolvidable. ¡Cada plato es una obra de arte!",
-  },
-];
 
 
 export default function China() {
@@ -70,59 +35,44 @@ export default function China() {
           </motion.div>
         </div>
 
-        {/* Platos con fondo negro y efectos rojos */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 p-10"
-        >
-          {platos.map((plato, index) => (
-            <div
-              key={index}
-              className="bg-black/80 rounded-xl p-4 shadow-md hover:scale-105 hover:shadow-red-500 transition-transform"
-            >
-              <img
-                src={plato.imagen}
-                alt={plato.nombre}
-                className="w-full h-40 object-cover rounded-md mb-3"
-              />
-             <h3 className="text-xl font-semibold text-red-400 text-center">{plato.nombre}</h3>
-              <p className="text-sm text-gray-300 mt-1 text-center">{plato.descripcion}</p>
-              <p className="mt-2 text-yellow-300 font-bold text-center">{plato.precio}</p>
+        <div className="p-8 max-w-screen">
+    <motion.h2 
+        className="text-2xl font-bold text-yellow-300 text-center bg-red-800 p-3 rounded-md shadow-md"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+    >
+        Platos Tradicionales
+    </motion.h2>
+    <p className="text-sm text-white text-center mt-2">
+        Descubre sabores auténticos y recetas clásicas con ingredientes frescos.
+    </p>
 
-            </div>
-          ))}
-        </motion.div>
+    {/* Platos chinos generados automáticamente */}
+    <ArregloChina />
+</div>
 
-        {/* Combo con fondo rojo en lugar de amarillo */}
-        <motion.div
-          className="mt-16 relative text-black rounded-xl text-center shadow-lg overflow-hidden"
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-        >
-          {/* FONDOS GIF superpuestos */}
-          <div className="absolute inset-0 z-0 flex">
-            {gifs.map((gif, index) => (
-              <img
-                key={index}
-                src={gif.src}
-                alt={gif.alt}
-                className="w-1/2 h-full object-cover"
-              />
-            ))}
-          </div>
-          <div className="absolute inset-0 bg-red-600/80 backdrop-blur"></div>
+        
+            <div className="max-w-screen">
 
-          {/* CONTENIDO */}
-          <div className="relative z-10 p-6">
-            <h3 className="text-2xl font-bold text-white">{combo.titulo}</h3>
-            <p className="mt-2 text-white">{combo.descripcion}</p>
-            <p className="mt-1 font-semibold text-lg text-yellow-300">{combo.precio}</p>
-          </div>
-        </motion.div>
+           
+             <motion.h2 
+        className="text-2xl font-bold text-yellow-300 text-center bg-red-800 p-3 rounded-md shadow-md"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+    >
+        Postres Fusión
+    </motion.h2>
+    <p className="text-sm text-white text-center mt-2">
+        Fusión chino-argentino combinando lo más icónico de ambas culturas.
+    </p>
 
+        <ArregloPostres />
+             </div>
+      <div className="p-2 max-w-screen">    
+       <ArregloCombo />
+</div>   
         {/* Mini video */}
         <div className="mt-12">
           <video
@@ -134,37 +84,49 @@ export default function China() {
           ></video>
         </div>
 
-       <motion.div
-  className="mt-16 flex flex-col md:flex-row items-center gap-8 bg-black/30 via-red-900 to-black p-6 rounded-xl border-4 border-yellow-500 shadow-yellow-500 scale-90"
-  initial={{ opacity: 0, scale: 0.8 }}
-  animate={{ opacity: 1, scale: 0.9 }}
-  transition={{ duration: 0.7 }}
+ <motion.div
+  className="mt-16 flex flex-col md:flex-row items-center gap-8 bg-gradient-to-r from-black via-red-600 to-black p-6 rounded-xl shadow-[0_4px_12px_#6E1B14] scale-100"
+  initial={{ opacity: 0, y: -20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
 >
-  {/* Imagen del chef ajustada */}
-  <div className="max-w-[150px] md:max-w-[200px] h-auto">
+  {/* Imagen del chef con efecto hover */}
+  <div className="max-w-[180px] md:max-w-[220px] h-auto">
     <img 
       src="/public/3975.png" 
       alt="Chef Lián Fuentes" 
-      className="w-full h-auto object-cover rounded-xl shadow-md"
+      className="w-full h-auto object-cover rounded-xl transition-transform duration-300 hover:scale-105"
     />
   </div>
 
-  {/* Información del chef más compacta */}
+  {/* Información del chef */}
   <div className="text-left md:w-1/2">
-    <h3 className="text-3xl font-bold text-yellow-400 mb-2">👨‍🍳 Chef Lián Fuentes</h3>
-    <p className="text-gray-300 text-base leading-normal">
-      Lián Fuentes, maestro de la cocina china-argentina, perfeccionó su técnica en Guangzhou y Buenos Aires. Su especialidad es la fusión equilibrada de sabores intensos y sutiles. Actualmente dirige Toro’s Wok, ofreciendo platos auténticos con un toque personal.
+    <h3 className="text-4xl font-bold text-[#FFD700] mb-4 flex items-center gap-2">
+      👨‍🍳 Chef Lián Fuentes
+    </h3>
+    <hr className="border-[#FFD700] border-t-2 mb-3" />
+    <p className="text-lg text-[#F2D8A7] leading-relaxed">
+      Maestro de la cocina china-argentina, perfeccionó su técnica en Guangzhou y Buenos Aires. Su especialidad es la fusión equilibrada de sabores intensos y sutiles.
+      Actualmente dirige <span className="text-[#FFD700] font-semibold">Toro’s Wok</span>, ofreciendo platos auténticos con un toque personal.
     </p>
+  </div>
+
+  {/* Elementos adicionales en la derecha */}
+  <div className="text-center md:w-1/3 space-y-4">
+    <p className="text-lg text-[#F2D8A7] italic">
+      “La cocina es el arte donde cada ingrediente cuenta su historia.”  
+    </p>
+    <div className="flex justify-center gap-4 text-[#FFD700] text-2xl">
+      🥟 🍜 🍣  
+    </div>
   </div>
 </motion.div>
 
 
+
+
+
 </div>
-
-
-
-        
-    
     </>
   );
 }
