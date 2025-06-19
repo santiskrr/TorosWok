@@ -16,7 +16,7 @@ import Bebidas from './pages/bebidas.jsx';
 function App() {
   return (
     <>
-
+    
     <CartProvider>
     <Navbar/>
     <BotonCart />
