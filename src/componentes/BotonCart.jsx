@@ -36,10 +36,16 @@ export default function BotonCart(){const { cart, increaseQuantity, decreaseQuan
                                     <li key={item.name} className="flex justify-between items-center py-1">
 
                                         <span>{item.name} - {item.price} x {item.quantity}</span>
+<<<<<<< HEAD
                                         <div className="flex">
                                             <button className="" onClick={() => decreaseQuantity(item.name)}><Buttonadd suma={false}/>
                                             </button>
                                             <button className="" onClick={() => increaseQuantity(item.name)}><Buttonadd suma={true}/></button>
+=======
+                                        <div>
+                                            <button className="px-2 bg-red-600 text-white rounded hover:bg-red-400 mx-1" onClick={() => decreaseQuantity(item.name)}>-</button>
+                                            <button className="px-2 bg-red-600 text-white rounded hover:bg-red-700" onClick={() => increaseQuantity(item.name)}>+</button>
+>>>>>>> 104dc46e7f613d0182c99e09dc995a50d604a0d1
                                         </div>
                                     </li>
                                 ))}
