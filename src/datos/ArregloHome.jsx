@@ -7,23 +7,23 @@ const container = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.35
-    }
-  }
+      staggerChildren: 0.25,
+    },
+  },
 };
-
 
 const item = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { 
-    opacity: 1, 
+  hidden: { opacity: 0, y: 50, scale: 0.95 },
+  visible: {
+    opacity: 1,
     y: 0,
+    scale: 1,
     transition: {
-      duration: 0.8
-    }
-  }
+      duration: 0.7,
+      ease: "easeOut",
+    },
+  },
 };
-
 
 const ArregloHome = () => {
 
@@ -32,7 +32,8 @@ const ArregloHome = () => {
       className="grid grid-cols-1 md:grid-cols-3 gap-8 p-10"
       variants={container}
       initial="hidden"
-      animate="visible"
+      whileInView="visible"
+      viewport={{ once: false, amount: 0.3 }}
     >
       {nuevosPlatos.map((plato, index) => (
         <motion.div
