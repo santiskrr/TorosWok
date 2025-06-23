@@ -1,10 +1,8 @@
-import React, { useContext } from "react";
+import React from "react";
 import { platosEstrella } from "./dataPlatoEstrella";
-import { CartContext } from "../context/CartContext.jsx";
 import { motion } from "framer-motion";
-
+import Button from "../componentes/Botonpedido";
 const ArregloPlatoEstrella = () => {
-  const { addToCart } = useContext(CartContext);
 
   return (
     <div className="p-2 max-w-screen">
@@ -13,7 +11,7 @@ const ArregloPlatoEstrella = () => {
           key={index}
           className="cursor-pointer"
           onClick={() =>
-            addToCart({ name: plato.nombre, price: plato.precio })
+            addToCart({ name: plato.comida, price: plato.precio })
           }
         >
           <motion.div
@@ -24,22 +22,20 @@ const ArregloPlatoEstrella = () => {
           >
             <img
               src={plato.imagen}
-              alt={plato.nombre}
+              alt={plato.comida}
               className="rounded-xl shadow-lg w-full md:w-1/2 object-cover h-64"
             />
             <div className="text-center md:text-left">
               <h3 className="text-2xl font-bold text-[#FFD700]">
-                Plato Estrella: {plato.nombre}
+                Plato Estrella: {plato.comida}
               </h3>
               <p className="mt-2 text-[#F2D8A7]">{plato.descripcion}</p>
               <p className="mt-2 text-[#C9A227] font-semibold text-lg">
                 Precio: {plato.precio}
               </p>
-              <button
-                className="mt-4 px-4 py-2 bg-[#A11916] text-white rounded-lg hover:bg-[#B96F1C] transition"
-              >
-                Hacer pedido
-              </button>
+              <div className='m-5'>
+                <Button  comida ={plato}/>
+                </div>
             </div>
           </motion.div>
         </div>

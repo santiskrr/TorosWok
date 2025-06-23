@@ -2,7 +2,7 @@ import tonkotsu from "../assets/Tonkotsu-Ramen.jpg";
 
 export const platosEstrella = [
   {
-    nombre: "Ramen Tonkotsu",
+    comida: "Ramen Tonkotsu",
     descripcion:
       "Nuestro ramen más vendido, con caldo cocido por 12 horas, topping de chashu y huevo marinado.",
     precio: "$18.000",

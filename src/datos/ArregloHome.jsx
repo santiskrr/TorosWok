@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { motion } from "framer-motion";
 import { nuevosPlatos } from "./dataHome.js";
-import { CartContext } from "../context/CartContext.jsx";
+import Button from "../componentes/Botonpedido.jsx";
 
 const container = {
   hidden: {},
@@ -26,7 +26,6 @@ const item = {
 
 
 const ArregloHome = () => {
-  const { addToCart } = useContext(CartContext);
 
   return (
     <motion.div
@@ -51,14 +50,9 @@ const ArregloHome = () => {
           </h3>
           <p className="text-sm text-[#F2D8A7] mt-1">{plato.descripcion}</p>
           <p className="mt-2 text-[#C9A227] font-bold">{plato.precio}</p>
-          <button
-            className="mt-4 px-4 py-2 bg-[#A11916] text-white rounded-lg hover:bg-[#B96F1C] transition"
-            onClick={() =>
-              addToCart({ name: plato.nombre, price: plato.precio })
-            }
-          >
-            Hacer pedido
-          </button>
+          <div className='m-5'>
+                <Button  comida ={plato}/>
+                </div>
         </motion.div>
       ))}
     </motion.div>

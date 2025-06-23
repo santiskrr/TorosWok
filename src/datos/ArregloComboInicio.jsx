@@ -13,7 +13,7 @@ const ArregloComboInicio = () => {
                 <div 
                     key={index} 
                     className="cursor-pointer"
-                    onClick={() => addToCart({ name: combo.titulo, price: combo.precio })}
+                    onClick={() => addToCart({ name: combo.oferta, price: combo.precioreal })}
                 >
                     <motion.div
                         className="relative bg-[#6E1B14] p-6 rounded-xl text-center shadow-md hover:shadow-[#B96F1C] overflow-hidden transition-transform"

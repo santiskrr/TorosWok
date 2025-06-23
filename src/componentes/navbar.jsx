@@ -25,7 +25,7 @@ const Navbar = () => {
             
             <div className="relative flex flex-grow justify-center">
                 
-                <ul className="flex gap-10 spectral-sc-regular">
+                <ul className="flex gap-7 spectral-sc-regular">
                     <li><Link to="/China" className="text-white shadow-md hover:shadow-yellow-400 hover:text-yellow-400">China</Link></li>
                     <li><Link to="/Corea" className="text-white shadow-md hover:shadow-blue-400 hover:text-blue-400">Corea</Link></li>
                     <li><Link to="/Japon" className="text-white shadow-md hover:shadow-red-400 hover:text-red-400">Japón</Link></li>
