@@ -4,9 +4,13 @@ import { CartContext } from "../context/CartContext";
 export default function Carrito() {
     const { cart, decreaseQuantity } = useContext(CartContext);
 
-    const totalPrecio = cart.reduce((total, item) => {
-        return total + parseFloat(item.price.replace("$", "").replace(".", ""));
-    }, 0).toLocaleString("es-AR");
+    // ✅ Total considerando cantidad
+    const totalPrecio = cart
+        .reduce((total, item) => {
+            const precioUnitario = parseFloat(item.price.replace("$", "").replace(".", ""));
+            return total + precioUnitario * item.quantity;
+        }, 0)
+        .toLocaleString("es-AR");
 
     const enviarPedido = () => {
         if (cart.length === 0) {
@@ -14,9 +18,17 @@ export default function Carrito() {
             return;
         }
 
-        const mensaje = cart.map(item => `- ${item.name}: ${item.price} x ${item.quantity}`).join("\n");
+        // ✅ Mostrar subtotales por producto
+        const mensaje = cart
+            .map(item => {
+                const precioUnitario = parseFloat(item.price.replace("$", "").replace(".", ""));
+                const subtotal = (precioUnitario * item.quantity).toLocaleString("es-AR");
+                return `- ${item.name}: ${item.price} x ${item.quantity} = $${subtotal}`;
+            })
+            .join("\n");
+
         const whatsappMensaje = `Hola, quiero hacer un pedido:\n${mensaje}\n\nTotal: $${totalPrecio}`;
-        
+
         window.open(`https://wa.me/?text=${encodeURIComponent(whatsappMensaje)}`, "_blank");
     };
 
@@ -32,7 +44,7 @@ export default function Carrito() {
                         {cart.map((item, index) => (
                             <li key={index} className="text-lg flex justify-between items-center">
                                 {item.name} - {item.price} x {item.quantity}
-                                <button 
+                                <button
                                     className="ml-4 px-2 py-1 bg-red-600 text-white rounded-md hover:bg-red-700"
                                     onClick={() => decreaseQuantity(item.name)}
                                 >
@@ -45,7 +57,7 @@ export default function Carrito() {
                 </>
             )}
 
-            <button 
+            <button
                 onClick={enviarPedido}
                 className="mt-4 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition"
             >

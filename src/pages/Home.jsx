@@ -12,7 +12,9 @@ const Inicio = () => {
       className="p-8 space-y-16 bg-black bg-cover bg-center bg-fixed max-w-screen"
       style={{ backgroundImage: `url(${fondoImage})` }}
     >
-      <motion.div
+      
+      <div className="">
+        <motion.div
         initial={{ opacity: 0, y: -40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
@@ -36,6 +38,7 @@ const Inicio = () => {
           </p>
         </div>
       </motion.div>
+      </div>
 
       <div className="p-1 max-w-screen">
         <ArregloPlatoEstrella />
